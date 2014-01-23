@@ -112,7 +112,7 @@ Ext.application({
             if (feature.attributes['purpose'] === undefined || feature.attributes['purpose'] === '') {
                 purpose = '';
             } else {
-                purpose = '<br/>' + '<b>Задача::</b> ' + feature.attributes['purpose'];
+                purpose = '<br/>' + '<b>Задача:</b> ' + feature.attributes['purpose'];
             }
             if (feature.attributes['stage'] === undefined || feature.attributes['stage'] === '') {
                 stage = '';
@@ -144,7 +144,7 @@ Ext.application({
                 location: feature,
                 width: 400,
                 html: '<div>' +
-                    '<b>Описание:</b> ' + feature.attributes['description'] + '<br/>' +
+                    '<b>Описание:</b> ' + feature.attributes['description'] +
                     purpose + 
                     stage + cost + finance + start_build + finish_build + '</div>',
                 collapsible: false,
