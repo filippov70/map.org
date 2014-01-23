@@ -1,0 +1,25 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.jumbotron{
+	background-color: #FFF;
+}
+
+.col-md-4 a.underline_link{
+	text-decoration: underline;
+}
+
+.jumbotron h1{
+	font-size: 50px;
+}
+
+.table tbody tr.info > td {
+    background-color: #F9F9F9;
+}
+
+.table tbody tr.info > td {
+    font-weight: bold;
+}

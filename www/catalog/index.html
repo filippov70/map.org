@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Каталог</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
+    <link href="/css/jumbotron.css" rel="stylesheet">
+
+    <link href="/css/catalog.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Геопортал</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">                    
+                        <li class = "active"><a href="/catalog/">Каталог</a></li>                    
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input placeholder="Email" class="form-control" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="Password" class="form-control" type="password">
+                        </div>
+                        <button type="submit" class="btn btn-success">Вход</button>
+                    </form>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Каталог</h1>
+            </div>
+        </div>
+
+        <div class="container">            
+
+            <div class = "row">
+                <div class="col-md-12 layer_meta">
+                    <h3>Доступные сервисы</h3>
+                    <h5><strong>WMS:</strong></h5>
+                    <p>http://geo.indorsoft.ru/geoserver/wms</p>
+                    <h5><strong>WFS:</strong></h5>
+                    <p>http://geo.indorsoft.ru/geoserver/wfs</p>   
+                    <h5><strong>Система координат:</strong></h5>
+                    <p>WGS-84</p>                                       
+                </div>
+            </div>       
+
+            <div class = "row">
+                <div class="col-md-12">
+                    <h3>Состав слоёв</h3>
+                    </br>
+                    <table class="table table-hover">
+                        <!--caption>Состав слоёв (сервисов) геопротрала</caption-->
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Имя</th>
+                                <th>Слой</th>
+                                <!--th>URL</th-->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class = "info bold">
+                                <td colspan = "3" align = "center" >Логические участки</td>
+                            </tr>
+                            <tr>                            
+                                <td colspan = "3" style = "padding:0;">                             
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            1
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Межузловые участки
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadInternodalSegment_ln
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a>                          
+                                            </div>
+                                            <div id="collapse1" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            2
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Участки обслуживания
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadServiceSegment_ln
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse2" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <div class="list-group-item">
+                                                            <h5>
+                                                                Описание:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Участки автомобильных дорог обслуживаемые подрядными организациями, которые занимаются работами по содержанию автомобильных дорог. 
+                                                                </li>
+                                                            </ul>
+                                                            <h5>
+                                                                Оформление WMS:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Виден на масштабах крупнее 1: 700 000
+                                                                </li>                                                                
+                                                            </ul> 
+                                                            <h5>
+                                                                Данные предоставляемые по WFS:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Тип геометрии  - линии (geoportal:RoadServiceSegment_ln)
+                                                                </li>                                                                
+                                                            </ul>                                                                                                                        
+                                                            <h5>
+                                                                Атрибуты:
+                                                            </h5>                                                         
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">&laquo;BalanceOrganizationName&raquo; &ndash; Балансовая (управляющая) организация </li>
+                                                                <li class="list-group-item">&laquo;ServiceOrganizationName&raquo; &ndash; Обслуживающая организация </li>
+                                                                <li class="list-group-item">&laquo;TitleName&raquo; &ndash; Наименование титула </li>
+                                                                <li class="list-group-item">&laquo;TraceName&raquo; &ndash; Наименование трассы </li>
+                                                                <li class="list-group-item">&laquo;RoadSegmentMame&raquo; &ndash; Наименование межузловог участка </li>
+                                                                <li class="list-group-item">&laquo;Position&raquo; &ndash; Начало участка(км) </li>
+                                                                <li class="list-group-item">&laquo;Ending&raquo; &ndash; Конец участка (км) </li>
+                                                            </ul>                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                                            
+                                    </div>                                                                              
+                                </td>                              
+                            </tr>
+                            <tr class = "info bold">
+                                <td colspan = "3" align = "center">Участки дороги</td>
+                            </tr>                        
+                           <tr>
+                                <td colspan = "3" style = "padding:0;"> 
+                                    <div class="panel-group" id="accordion2">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse3">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            3
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Проезжая часть
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadDrivewaySegment_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a>                          
+                                            </div>
+                                            <div id="collapse3" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse4">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            4
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Полосы уширения
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadAccelLine_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse4" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse5">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            5
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Обочины (Обочины)
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadEdgeSegment_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse5" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse6">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            6
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Обочины (Укрепление обочины)
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:EdgeFortification_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse6" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse7">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            7
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Обочины (Укрепительные полосы)
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:HardStrip_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse7" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse8">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            8
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Обочины (Остановочные полосы)
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:StoppingLane_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse8" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse9">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            9
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Тротуары и пешеходные дорожки
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadSidewalk_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse9" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse10">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            10
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Бордюры
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadBorder_ln
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse10" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse11">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            11
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Проблемные участки
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadProblemSegment_ln
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse11" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse12">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            12
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Откосы насыпи
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadSlopeSegment_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse12" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse13">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            13
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Разделительные полосы
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadDemarcationStripSegment_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse13" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapse14">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            14
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Полосы безопасности
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:SafetyStrip_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse14" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>              
+                                    </div>                                     
+                                </td>                                                            
+                            </tr> 
+                            <tr class = "info bold">
+                                <td colspan = "3" align = "center">Сооружения</td>
+                            </tr>                            
+                           <tr>
+                                <td colspan = "3" style = "padding:0;"> 
+                                    <div class="panel-group" id="accordion3">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse15">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            15
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Водоотведение
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadDrainageSegment_ln, geoportal:RoadDrainageSegment_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a>                          
+                                            </div>
+                                            <div id="collapse15" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse16">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            16
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Снегозащитные сооружения
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadSnowProtection_ln, geoportal:RoadSnowProtection_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse16" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse17">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            17
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Шумозащитные сооружения
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadNoiseBarrier_ln
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse17" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse18">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            18
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Подпорные стенки
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadBreastWall_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse18" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion3" href="#collapse19">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            19
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Съезды
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadExit_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse19" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>                                      
+                                </td>                                
+                            </tr> 
+                            <tr class = "info bold">
+                                <td colspan = "3" align = "center">Инженерное обустройство</td>
+                            </tr>                          
+                           <tr>
+                                <td colspan = "3" style = "padding:0;"> 
+                                    <div class="panel-group" id="accordion4">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion4" href="#collapse20">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            20
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Километровые столбы
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadDistanceMark_pt
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse20" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                      
+                                    </div>                                     
+                                </td>                                
+                            </tr>  
+                            <tr class = "info bold">
+                                <td colspan = "3" align = "center">Придорожная полоса</td>
+                            </tr>                          
+                           <tr>
+                                <td colspan = "3" style = "padding:0;"> 
+                                    <div class="panel-group" id="accordion5">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion5" href="#collapse21">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            21
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Земельные участки
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadROFSegment_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse21" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <div class="list-group-item">
+                                                            <h5>
+                                                                Описание:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Земельные участки на которых расположена автомобильная дорога.
+                                                                </li>
+                                                            </ul>
+                                                            <h5>
+                                                                Оформление WMS:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Виден на масштабах крупнее 1 : 50 000
+                                                                </li>                                                                
+                                                            </ul> 
+                                                            <h5>
+                                                                Данные предоставляемые по WFS:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Тип геометрии  - полигон (geoportal:RoadROFSegment_ar)
+                                                                </li>                                                                
+                                                            </ul>                                                                                                                        
+                                                            <h5>
+                                                                Атрибуты:
+                                                            </h5>                                                         
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">&laquo;Square&raquo; &ndash; Плащадь (кв.м.) </li>
+                                                                <li class="list-group-item">&laquo;RepresentSquare&raquo; &ndash; Плащадь по документам(кв.м.) </li>
+                                                                <li class="list-group-item">&laquo;CadasterNumber&raquo; &ndash; Кадастровый номер </li>
+                                                                <li class="list-group-item">&laquo;UsageString&raquo; &ndash; Разрешённое использование </li>
+                                                                <li class="list-group-item">&laquo;RightTypeString&raquo; &ndash; Вид права </li>
+                                                                <li class="list-group-item">&laquo;RightCertificationDocName&raquo; &ndash; Наименование правоудостоверяющего документа </li>
+                                                                <li class="list-group-item">&laquo;RightCertificationDocNumber&raquo; &ndash; Номер правоудостоверяющего документа </li>
+                                                                <li class="list-group-item">&laquo;RightCertificationDocRegistrationDate&raquo; &ndash; Дата правоудостоверяющего документа </li>
+                                                                <li class="list-group-item">&laquo;RightEstablishmentDocName&raquo; &ndash; Наименование правоустанавливающего документа </li>
+                                                                <li class="list-group-item">&laquo;RightEstablishmentDocNumber&raquo; &ndash; Номер правоустанавливающего документа </li>
+                                                                <li class="list-group-item">&laquo;RightEstablishmentDocRegistrationDate&raquo; &ndash; Дата правоустанавливающего документа </li>
+                                                                <li class="list-group-item">&laquo;Notes&raquo; &ndash; Примечания </li>                                                                
+                                                            </ul>                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion5" href="#collapse22">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            22
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Придорожные полосы
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:Wayside_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse22" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <div class="list-group-item">
+                                                            <h5>
+                                                                Описание:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Придорожная полоса автомобильной дороги - зона с особыми условиями использования территории. 
+                                                                    Порядок установления и использования придорожных полос автомобильных дорог федерального значения 
+                                                                    устанавливается на основании Приказа Минтранса от 13 января 2010 №4 и в соответствии со статьей 
+                                                                    26 Федерального закона от 8 ноября 2007 г. N 257-ФЗ "Об автомобильных дорогах и о 
+                                                                    дорожной деятельности в Российской Федерации и о внесении изменений в отдельные законодательные 
+                                                                    акты Российской Федерации"1 (далее - Федеральный закон от 8 ноября 2007 г. N 257-ФЗ) и 
+                                                                    пунктом 5.2.53.28 Положения о Министерстве транспорта Российской Федерации, утвержденного 
+                                                                    постановлением Правительства Российской Федерации от 30 июля 2004 г. N 3952.
+                                                                </li>
+                                                            </ul>
+                                                            <h5>
+                                                                Оформление WMS:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Виден на масштабах крупнее 1 : 50 000
+                                                                </li>                                                                
+                                                            </ul> 
+                                                            <h5>
+                                                                Данные предоставляемые по WFS:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Тип геометрии  - полигон (geoportal:Wayside_ar)
+                                                                </li>                                                                
+                                                            </ul>                                                                                                                        
+                                                            <h5>
+                                                                Атрибуты:
+                                                            </h5>                                                         
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">&laquo;Name&raquo; &ndash; Наименование </li>
+                                                                <li class="list-group-item">&laquo;Square&raquo; &ndash; Плащадь (кв.м.) </li>
+                                                                <li class="list-group-item">&laquo;Width&raquo; &ndash; Ширина(м) </li>
+                                                                <li class="list-group-item">&laquo;TitleName&raquo; &ndash; Наименование титула </li>                                                              
+                                                            </ul>                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                         
+                                    </div>                                       
+                                </td>                                
+                            </tr>  
+                            <tr class = "info bold">
+                                <td colspan = "3" align = "center">Недвижимость</td>
+                            </tr>                          
+                           <tr>
+                                <td colspan = "3" style = "padding:0;"> 
+                                    <div class="panel-group" id="accordion6">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion6" href="#collapse23">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            23
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Автозаправочные станции
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadGasStation_pt, geoportal:RoadGasStation_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a>                          
+                                            </div>
+                                            <div id="collapse23" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <div class="list-group-item">
+                                                            <h5>
+                                                                Описание:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Комплекс оборудования на придорожной территории, предназначенный для заправки топливом транспортных средств.
+                                                                </li>
+                                                            </ul>
+                                                            <h5>
+                                                                Оформление WMS:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Виден на масштабах крупнее 1:700 000 00
+                                                                </li>                                                                
+                                                            </ul> 
+                                                            <h5>
+                                                                Данные предоставляемые по WFS:
+                                                            </h5>                                                        
+                                                             <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    Тип геометрии  - полигон, точка (geoportal:RoadGasStation_ar, geoportal:RoadGasStation_pt)
+                                                                </li>                                                                
+                                                            </ul>                                                                                                                        
+                                                            <h5>
+                                                                Атрибуты:
+                                                            </h5>                                                         
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">&laquo;Name&raquo; &ndash; Наименование </li>
+                                                                <li class="list-group-item">&laquo;Square&raquo; &ndash; Плащадь (кв.м.) </li>
+                                                                <li class="list-group-item">&laquo;SiteSquare&raquo; &ndash; Площадь участка (кв.м) </li>
+                                                                <li class="list-group-item">&laquo;Distance&raquo; &ndash; Расстояние от кромки(м) </li>                                                              
+                                                                <li class="list-group-item">&laquo;PhoneNumber&raquo; &ndash; Номер телефона </li>
+                                                                <li class="list-group-item">&laquo;WorkingTime&raquo; &ndash; Часы работы </li>
+                                                                <li class="list-group-item">&laquo;ColumnCount&raquo; &ndash; Количество колонок </li>
+                                                                <li class="list-group-item">&laquo;Power&raquo; &ndash; Мощность(количество заправок в сутки) </li>                                                                   
+                                                                <li class="list-group-item">&laquo;TitleName&raquo; &ndash; Наименование титула </li> 
+                                                            </ul>                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion6" href="#collapse24">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            24
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Посты ГИБДД
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadGAIPost_pt, geoportal:RoadGAIPost_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse24" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion6" href="#collapse25">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            25
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Гостиницы
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadHotel_pt, geoportal:RoadHotel_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse25" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion6" href="#collapse26">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            26
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Парковки
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadParking_pt, geoportal:RoadParking_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse26" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion6" href="#collapse27">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            27
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Пункты общепита
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadPublicCatering_pt, geoportal:RoadPublicCatering_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse27" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion6" href="#collapse28">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            28
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Автомойки
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadWashingPoint_pt, geoportal:RoadWashingPoint_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse28" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion6" href="#collapse29">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            29
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Станции техобслуживания
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadTechServiceStation_pt, geoportal:RoadTechServiceStation_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse29" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion6" href="#collapse30">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            30
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Туалеты
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadToilet_ar
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse30" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <a data-toggle="collapse" data-parent="#accordion6" href="#collapse31">
+                                                    <div class = "row">
+                                                        <div class = "col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            31
+                                                        </div>
+                                                        <div class = "col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            Пункты оплаты
+                                                        </div>
+                                                        <div class = "col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                                            geoportal:RoadTollStation_pt
+                                                        </div>                            
+                                                    </div>                                                                       
+                                                </a> 
+                                            </div>
+                                            <div id="collapse31" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="list-group">
+                                                        <a href="#" class="list-group-item">...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                                                      
+                                    </div>                                     
+                                </td>                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div> <!-- /container -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>
