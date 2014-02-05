@@ -5,6 +5,9 @@
         </footer>
     </div> <!-- /container -->
 
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"]."/ya.php";
+?> 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

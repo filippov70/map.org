@@ -47,19 +47,19 @@ require_once $_SERVER["DOCUMENT_ROOT"]."/header.php";
 
         <div class="row">
             <div class="col-md-4">
-                <a  class = "underline_link" href="/tutorials/tutorial1_manual.html"><h2>Подключение WMS</h2></a>
+                <a  class = "underline_link" href="/tutorials/tutorial1_manual.php"><h2>Подключение WMS</h2></a>
                 <p>Подключение растрового слоя из WMS-источника.</p>
-                <p><a class="btn btn-default" href="/tutorials/tutorial1_manual.html" role="button">Подробнее »</a></p>
+                <p><a class="btn btn-default" href="/tutorials/tutorial1_manual.php" role="button">Подробнее »</a></p>
             </div>              
             <div class="col-md-4">          
-                <a  class = "underline_link" href="/tutorials/tutorial3_manual.html"><h2>Подключение WFS-слоя</h2></a>
+                <a  class = "underline_link" href="/tutorials/tutorial3_manual.php"><h2>Подключение WFS-слоя</h2></a>
                 <p>Подключение векторного слоя из WFS-источника. </p>
-                <p><a class="btn btn-default" href="/tutorials/tutorial3_manual.html" role="button">Подробнее »</a></p>
+                <p><a class="btn btn-default" href="/tutorials/tutorial3_manual.php" role="button">Подробнее »</a></p>
             </div>
                 <div class="col-md-4">          
-                <a  class = "underline_link" href="/tutorials/tutorial2_manual.html"><h2>Фильтрация WFS</h2></a>
+                <a  class = "underline_link" href="/tutorials/tutorial2_manual.php"><h2>Фильтрация WFS</h2></a>
                 <p>Подключение векторного слоя из WFS-источника с фильтрацией данных.</p>
-                <p><a class="btn btn-default" href="/tutorials/tutorial2_manual.html" role="button">Подробнее »</a></p>
+                <p><a class="btn btn-default" href="/tutorials/tutorial2_manual.php" role="button">Подробнее »</a></p>
             </div>                   
         </div>
 <?php
