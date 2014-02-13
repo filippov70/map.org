@@ -29,7 +29,7 @@ require_once $_SERVER["DOCUMENT_ROOT"]."/header.php";
         <div class="row">
             <div class="col-md-4">          
                 <a  class = "underline_link" href="/avtodor/"><h2>Объекты дорожного сервиса</h2></a>
-                <p>Подключение WMS-слоёв на примере сайта www.russianhighways.ru</p>
+                <p>Подключение WMS-слоёв на примере сайта www.russianhighways.ru и федеральной автомобильной дороги М-1</p>
                 <p><a class="btn btn-default" href="/avtodor/" role="button">Подробнее »</a></p>
             </div>               
             <div class="col-md-4">          

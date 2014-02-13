@@ -161,45 +161,92 @@ Ext.application({
             highlightLayer.addFeatures(e.feature);
             highlightLayer.setZIndex(1000);
             highlightLayer.redraw();
-            createPopup(e.feature);
+            createPopup(e.feature, formatter);
         });
 
-        function createPopup(feature) {
+        var formatter = {
+            wiki: function(attr) {
+                return '<a href="' + this.feature[attr] + '" target="_blank">Википедия</a>';
+            },
+            roadid: function(attr) {
+                return '<b>Идентификатор:</b> ' + this.feature[attr];
+            },
+            path: function(attr) {
+                return '<b>Маршрут:</b> ' + this.feature[attr];
+            },
+            nameupr: function(attr) {
+
+                var attrValue = this.feature['url'];
+
+                if (!this.validate(attrValue)) {
+                    return '<b>Управление:</b> ' + this.feature[attr];
+                }
+
+                return '<b>Управление:</b> <a href="http://' + this.feature['url'] + '" target="_blank">' + this.feature[attr] + '</a>';
+            },
+            url: function(attr) {
+                return this.feature[attr];
+            },
+            ref: function(attr) {
+
+                var attrValue = this.feature['ref_new'];
+
+                if (!this.validate(attrValue)) {
+                    return '<b>Наименование:</b> ' + this.feature[attr];
+                }
+
+                return '(' + this.feature[attr] + ')';
+            },
+            ref_new: function(attr) {
+                return '<b>Наименование:</b> ' + this.feature[attr];
+            },
+            validate: function(attr) {
+                if (attr == "Null" ||
+                    attr == "undefined" ||
+                    attr == undefined ||
+                    attr == "" ||
+                    attr == "NaN") {
+                    return false;
+                }
+                return true;
+            },
+            getAttributeView: function(attr) {
+
+                var attrValue = this.feature[attr];
+
+                if (!this.validate(attrValue)) {
+                    return "";
+                }
+
+                return this[attr](attr);
+            },
+            get_view: function(feature) {
+                this.feature = feature;
+                var view =
+                    '<div>' +
+                    this.getAttributeView('ref_new') +
+                    this.getAttributeView('ref') + '</br>' +
+                    this.getAttributeView('roadid') + '</br>' +
+                    this.getAttributeView('path') + '</br>' +
+                    this.getAttributeView('nameupr') + '</br>' +
+                    this.getAttributeView('wiki') +
+                    '</div>';
+                return view;
+            }
+        };
+        function createPopup(feature, formatter) {
+
             var link, ref, roadid;
+
             if (feature == undefined) {
                 return;
             }
-            if(feature.attributes['wiki'] == undefined || feature.attributes['wiki'] == ""){
-                link = "";
-            }else{
-                link = feature.attributes['wiki'] + '" target="_blank">Википедия</a></div>';
-            }
-
-            if (feature.attributes['ref_new'] == undefined || feature.attributes['ref_new'] == "") {
-                ref = feature.attributes['ref'];
-            } else {
-                if (feature.attributes['ref'] == undefined || feature.attributes['ref'] == "") {
-                    ref = feature.attributes['ref_new'];
-                } else {
-                    ref = feature.attributes['ref_new'] + ' (' + feature.attributes['ref'] + ')';
-                }
-            }
-
-            if(feature.attributes['roadid'] == undefined || feature.attributes['roadid'] == ""){
-                roadid = "";
-            }else{
-                roadid = '<b>Идентификатор:</b> ' + feature.attributes['roadid'] + '<br/>';
-            }            
 
             popup = Ext.create('GeoExt.window.Popup', {
                 title: 'Информация о дороге',
                 location: feature,
                 width: 400,
-                html: '<div>' + '<b>Наименование:</b> ' + ref + '<br/>' + 
-                roadid +
-                '<b>Маршрут:</b> ' + 
-                feature.attributes['path'] + '<br/>' + '<b>Управление:</b> ' + 
-                feature.attributes['nameupr'] + '<br/> <a href="' + link,
+                html: formatter.get_view(feature.attributes),
                 collapsible: false,
                 map: map
             });
