@@ -13,14 +13,14 @@ class ControllerResolver {
 	}
 
 	public function getController( Request $request ){
-		$seporator = DIRECTORY_SEPARATOR;
-		$requestURI = $_SERVER["REQUEST_URI"];
-		
-		if( $requestURI == '/' || $requestURI == '/index.php' ){
+
+		$controller = $this -> getRoute();
+
+		if( $controller == '') {
 			return self::$defaultController;
 		}
 
-		$controller           = str_replace( array( '.', '/' ), "", $requestURI );
+		$seporator = DIRECTORY_SEPARATOR;
 		$filepathToController = "geoportal{$seporator}controller{$seporator}{$controller}.php";
 		$controllerName       = "controller_$controller";
 
@@ -41,6 +41,19 @@ class ControllerResolver {
 		$request -> addFeedback( "Контроллер '$controller' не найден" );
 		return clone self::$defaultController;
 	}
-	
+
+	public function getRoute() {		
+		$requestURI = $_SERVER["REQUEST_URI"];
+
+		$strpos = strpos( $requestURI, '?' );
+
+		if ( $strpos ) {
+			$requestURI = substr( $requestURI, 0, $strpos );
+		}
+
+		$controller = str_replace( array( '.', '/' ), "", $requestURI );	
+
+		return $controller;	
+	}
 }
 ?>
