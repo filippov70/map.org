@@ -19,22 +19,16 @@ class ControllerResolver {
 		if( $controller == '') {
 			return self::$defaultController;
 		}
+		
+		$controllerName = "controller_$controller";
 
-		$seporator = DIRECTORY_SEPARATOR;
-		$filepathToController = "geoportal{$seporator}controller{$seporator}{$controller}.php";
-		$controllerName       = "controller_$controller";
+		if( class_exists( $controllerName ) ) {
+			$objController = new ReflectionClass( $controllerName );
 
-		if( file_exists( $filepathToController ) ){
-			require_once $filepathToController;
-
-			if( class_exists( $controllerName ) ) {
-				$objController = new ReflectionClass( $controllerName );
-
-				if( $objController -> isSubClassOf( self::$baseController ) ) {
-					return $objController -> newInstance();
-				} else {
-					$request -> addFeedback( "'$controller' не является потмком BaseController" );
-				}
+			if( $objController -> isSubClassOf( self::$baseController ) ) {
+				return $objController -> newInstance();
+			} else {
+				$request -> addFeedback( "'$controller' не является потмком BaseController" );
 			}
 		}
 
